@@ -19,8 +19,8 @@ const FeedBacks = () => {
 	};
 
 	return (
-		<div className="w-full mt-32 mb-16 pt-20 pb-20 flex flex-col items-center gap-16 bg-customGray lg:w-[90%] xl:h-[590px] xl:px-40 xl:relative">
-			<h1 className="w-72 text-3xl font-bold font-playfairDisplay text-customWhiteVariant xl:w-[560px] xl:absolute xl:top-20 xl:left-36 xl:text-4xl xl:tracking-wide">
+		<div className="w-screen mt-32 mb-16 pt-20 pb-20 flex flex-col items-center gap-16 bg-customGray md:w-full xl:w-screen xl:max-w-screen-2xl xl:h-[590px] xl:px-40 xl:relative">
+			<h1 className="w-72 text-3xl font-bold font-playfairDisplay text-customWhiteVariant xl:w-[560px] xl:absolute xl:top-20 xl:left-36 xl:text-4xl xl:tracking-wide 2xl:left-48">
 				See how women have been impacted by the
 				<span className="text-customSoftOrange"> power of love:</span>
 			</h1>
@@ -55,7 +55,7 @@ const FeedBacks = () => {
 			</div>
 
 			{/* FOR DESKTOP VIEW ONLY */}
-			<div className="hidden xl:flex xl:flex-col xl:gap-5 xl:pb-16 xl:rounded-br-[85px] xl:bg-customCreamVariant xl:font-playfairDisplay xl:w-[560px] xl:absolute xl:bottom-20 xl:left-36 xl:h-80 xl:px-14 xl:pt-6">
+			<div className="hidden xl:flex xl:flex-col xl:gap-5 xl:pb-16 xl:rounded-br-[85px] xl:bg-customCreamVariant xl:font-playfairDisplay xl:w-[560px] xl:absolute xl:bottom-20 xl:left-36 xl:h-80 xl:px-14 xl:pt-6 2xl:left-48">
 				<p className="text-2xl font-bold xl:text-xl">
 					“Once Marni held me accountable, it was easier for me
 					to finally recognize when Mr. Right (Mark) came along.”
@@ -71,7 +71,7 @@ const FeedBacks = () => {
 				</div>
 			</div>
 
-			<div className="hidden xl:flex xl:flex-col xl:gap-4 xl:pb-16 xl:bg-customCreamVariant xl:font-playfairDisplay xl:w-[560px] xl:absolute xl:top-20 xl:right-36 xl:h-80 xl:px-14 xl:pt-6 xl:rounded-tl-[85px]">
+			<div className="hidden xl:flex xl:flex-col xl:gap-4 xl:pb-16 xl:bg-customCreamVariant xl:font-playfairDisplay xl:w-[560px] xl:absolute xl:top-20 xl:right-36 xl:h-80 xl:px-14 xl:pt-6 xl:rounded-tl-[85px] 2xl:right-48">
 				<p className="text-2xl font-bold xl:text-xl">
 					“I am now much more grounded and confident and I feel like
 					I’m living the life that I wanted to live now.”
