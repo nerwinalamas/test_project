@@ -6,7 +6,7 @@ const Achieve = () => {
 			<h1 className="font-playfairDisplay text-3xl font-bold text-center xl:text-4xl">
 				What you’ll achieve:
 			</h1>
-			<div className="flex flex-col gap-24 lg:flex-row lg:flex-wrap lg:gap-32">
+			<div className="flex flex-col gap-24 lg:flex-row lg:flex-wrap xl:gap-32">
 				{achieveData.map((data, index) => (
 					<div key={index} className={`flex flex-col gap-5 items-center xl:gap-1 ${index === 1 ? "xl:mt-28" : ""}`}>
 						<img src={data.image} alt={data.alternativeText} />
