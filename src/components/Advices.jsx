@@ -12,7 +12,7 @@ const Advices = () => {
 	};
 
 	return (
-		<div className="flex flex-col gap-14 lg:w-full lg:flex-row-reverse lg:justify-evenly">
+		<div className="flex flex-col gap-14 md:w-full lg:w-full lg:flex-row-reverse lg:justify-evenly">
 			<img src={MaskGroup} alt="Mask Group 121" className="lg:w-96 lg:h-96 lg:rounded-md" />
 			<div className="flex flex-col xl:w-[55%]">
 				{advicesData.map((data, index) => (
@@ -44,7 +44,7 @@ const Advices = () => {
 							}`}
 						>
 							{openIndex === index && (
-								<div className="w-72 ml-5 mb-8 text-lg tracking-wide lg:w-96 xl:w-full">
+								<div className="w-full p-5 mb-8 text-lg tracking-wide">
 									{data.description}
 								</div>
 							)}
