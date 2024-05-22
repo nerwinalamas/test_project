@@ -2,7 +2,7 @@ import { useState } from "react";
 import MaskGroup from "../assets/images/mask_group_121.jpg";
 import { advicesData } from "../data";
 import MinusCircleLine from "../assets/svgs/minus_circle_line.svg";
-import PlusCirlceLine from "../assets/svgs/plus_circle_line.svg";
+import PlusCircleLine from "../assets/svgs/plus_circle_line.svg";
 
 const Advices = () => {
 	const [openIndex, setOpenIndex] = useState(null);
@@ -18,10 +18,10 @@ const Advices = () => {
 				{advicesData.map((data, index) => (
 					<div key={index} className="border-b-2 border-customGray">
 						<div
-							className="flex justify-between px-5 py-4 lg:py-5"
+							className="flex justify-between px-5 py-4 lg:py-5 cursor-pointer"
 							onClick={() => handleClick(index)}
 						>
-							<h3 className="w-60 md:w-80 px-1 text-xl font-playfairDisplay font-bold leading-[35px] cursor-pointer text-customDarkerBlack lg:w-96">
+							<h3 className="w-60 md:w-80 px-1 text-xl font-playfairDisplay font-bold leading-[35px] text-customDarkerBlack lg:w-96">
 								{data.title}
 							</h3>
 							{openIndex === index ? (
@@ -32,15 +32,23 @@ const Advices = () => {
 								/>
 							) : (
 								<img
-									src={PlusCirlceLine}
+									src={PlusCircleLine}
 									alt="Plus Circle Line Icon"
 									className="cursor-pointer"
 								/>
 							)}
 						</div>
-						{openIndex === index && (
-							<div className="w-72 ml-5 mb-8 text-lg tracking-wide duration-1000 lg:w-96">{data.description}</div>
-						)}
+						<div
+							className={`transition-max-height duration-700 ease-in-out overflow-hidden ${
+								openIndex === index ? "max-h-96" : "max-h-0"
+							}`}
+						>
+							{openIndex === index && (
+								<div className="w-72 ml-5 mb-8 text-lg tracking-wide lg:w-96">
+									{data.description}
+								</div>
+							)}
+						</div>
 					</div>
 				))}
 			</div>

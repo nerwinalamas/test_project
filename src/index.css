@@ -11,6 +11,10 @@ body {
     background-size: cover;
 }
 
+.transition-max-height {
+	transition: max-height 0.7s ease-in-out;
+}
+
 @media (min-width: 768px) { 
     body {
         background-image: url("./assets/images/mobile_gradient_background@2x.png");
