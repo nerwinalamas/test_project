@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import MaskGroup from "../assets/images/mask_group_121.jpg";
 import { advicesData } from "../data";
 import MinusCircleLine from "../assets/svgs/minus_circle_line.svg";
@@ -6,15 +6,28 @@ import PlusCircleLine from "../assets/svgs/plus_circle_line.svg";
 
 const Advices = () => {
 	const [openIndex, setOpenIndex] = useState(null);
+	const [height, setHeight] = useState({});
+	const contentRefs = useRef([]);
 
 	const handleClick = (index) => {
-		setOpenIndex(openIndex === index ? null : index);
+		if (openIndex === index) {
+			setOpenIndex(null);
+		} else {
+			setOpenIndex(index);
+			setHeight({ [index]: contentRefs.current[index].scrollHeight });
+		}
 	};
+
+	useEffect(() => {
+		if (openIndex !== null) {
+			setHeight({ [openIndex]: contentRefs.current[openIndex].scrollHeight });
+		}
+	}, [openIndex]);
 
 	return (
 		<div className="flex flex-col gap-14 md:w-full lg:w-full lg:flex-row-reverse lg:justify-evenly">
 			<img src={MaskGroup} alt="Mask Group 121" className="lg:w-96 lg:h-96 lg:rounded-md" />
-			<div className="flex flex-col xl:w-[55%]">
+			<div className="flex flex-col xl:w-[50%]">
 				{advicesData.map((data, index) => (
 					<div key={index} className="border-b-2 border-customGray">
 						<div
@@ -39,15 +52,12 @@ const Advices = () => {
 							)}
 						</div>
 						<div
-							className={`transition-max-height duration-700 ease-in-out overflow-hidden ${
-								openIndex === index ? "max-h-96" : "max-h-0"
-							}`}
+							className={`transition-all duration-700 ease-in-out overflow-hidden`}
+							style={{ maxHeight: openIndex === index ? `${height[index]}px` : "0" }}
 						>
-							{openIndex === index && (
-								<div className="w-full p-5 mb-8 text-lg tracking-wide">
-									{data.description}
-								</div>
-							)}
+							<div ref={(el) => (contentRefs.current[index] = el)} className="p-5">
+								{data.description}
+							</div>
 						</div>
 					</div>
 				))}
