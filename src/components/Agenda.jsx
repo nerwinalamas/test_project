@@ -5,14 +5,14 @@ const Agenda = () => {
 	const [showTab, setShowTab] = useState(1);
 
 	return (
-		<div className="flex flex-col items-center gap-14 font-playfairDisplay md:w-96 lg:w-full lg:flex-row lg:justify-between lg:items-start">
-			<h1 className="w-44 h-24 text-3xl text-center font-bold lg:text-5xl lg:w-72 lg:text-start lg:leading-[1.13]">
+		<div className="flex flex-col items-center gap-14 font-playfairDisplay md:w-96 lg:w-full lg:flex-row lg:justify-between lg:items-start text-customDarkerBlack">
+			<h1 className="w-48 h-24 text-4xl text-center font-bold lg:text-5xl lg:w-72 lg:text-start lg:leading-[1.13]">
 				What’s on the agenda
 			</h1>
 			{/* FOR SMALLER SCREENS ONLY */}
-			<div className="w-[349px] rounded-3xl p-8 flex flex-col gap-5 items-center bg-customLightGray lg:hidden">
+			<div className="w-[349px] rounded-3xl p-7 flex flex-col gap-5 items-center bg-customLightGray lg:hidden">
 				<p
-					className={`w-56 text-3xl font-bold p-3 text-center cursor-pointer ${
+					className={`w-56 text-3xl font-bold p-2 text-center cursor-pointer ${
 						showTab === 1 ? "rounded-full bg-customCream" : ""
 					}`}
 					onClick={() => setShowTab(1)}
@@ -20,7 +20,7 @@ const Agenda = () => {
 					Day 1
 				</p>
 				<p
-					className={`w-56 text-3xl font-bold p-3 text-center cursor-pointer ${
+					className={`w-56 text-3xl font-bold p-2 text-center cursor-pointer ${
 						showTab === 2 ? "rounded-full bg-customCream" : ""
 					}`}
 					onClick={() => setShowTab(2)}
@@ -28,7 +28,7 @@ const Agenda = () => {
 					Day 2
 				</p>
 				<p
-					className={`w-56 text-3xl font-bold p-3 text-center cursor-pointer ${
+					className={`w-56 text-3xl font-bold p-2 text-center cursor-pointer ${
 						showTab === 3 ? "rounded-full bg-customCream" : ""
 					}`}
 					onClick={() => setShowTab(3)}
@@ -37,11 +37,11 @@ const Agenda = () => {
 				</p>
 			</div>
 
-			<div className="lg:w-[60%]">
+			<div className="lg:w-[65%]">
 				{/* FOR LARGE SCREEN AND UP */}
 				<div className="hidden lg:w-full lg:rounded-full lg:p-3 lg:flex lg:gap-5 lg:items-center lg:bg-customLightGray">
 					<p
-						className={`w-56 text-3xl font-bold p-3 text-center cursor-pointer ${
+						className={`w-56 text-3xl font-bold p-2 text-center cursor-pointer ${
 							showTab === 1 ? "rounded-full bg-customCream" : ""
 						}`}
 						onClick={() => setShowTab(1)}
@@ -49,7 +49,7 @@ const Agenda = () => {
 						Day 1
 					</p>
 					<p
-						className={`w-56 text-3xl font-bold p-3 text-center cursor-pointer ${
+						className={`w-56 text-3xl font-bold p-2 text-center cursor-pointer ${
 							showTab === 2 ? "rounded-full bg-customCream" : ""
 						}`}
 						onClick={() => setShowTab(2)}
@@ -57,7 +57,7 @@ const Agenda = () => {
 						Day 2
 					</p>
 					<p
-						className={`w-56 text-3xl font-bold p-3 text-center cursor-pointer ${
+						className={`w-56 text-3xl font-bold p-2 text-center cursor-pointer ${
 							showTab === 3 ? "rounded-full bg-customCream" : ""
 						}`}
 						onClick={() => setShowTab(3)}
@@ -67,14 +67,14 @@ const Agenda = () => {
 				</div>
 				{/* DAY 1 */}
 				<div
-					className={`flex flex-col gap-14 items-center lg:items-start ${
+					className={`flex flex-col gap-12 items-center lg:items-start ${
 						showTab === 1 ? "block" : "hidden"
 					}`}
 				>
 					<h2 className="w-80 text-3xl font-bold text-customDarkerBlack lg:w-full lg:mt-20">
 						Your REVEAL Day! (aka The Silver Bullet)
 					</h2>
-					<p className="w-[312px] text-lg tracking-wide text-customBlack font-oxygen md:w-full lg:text-xl">
+					<p className="w-[312px] text-lg tracking-wide text-customBlack font-oxygen md:w-full lg:text-xl xl:text-base">
 						Identify your personal 10% blindspot (everyone has one)
 						that sends quality men running for the hills and clear
 						limiting beliefs that keep you stuck in the scarcity
@@ -97,10 +97,10 @@ const Agenda = () => {
 										</p>
 									</span>
 									<div className="flex flex-col gap-8">
-										<h3 className="text-xl font-bold font-playfairDisplay text-customDarkerBlack lg:text-3xl">
+										<h3 className="text-xl font-bold font-playfairDisplay text-customDarkerBlack lg:text-2xl">
 											{data.title}
 										</h3>
-										<p className="w-64 text-lg tracking-wide text-customBlack lg:w-full lg:text-xl">
+										<p className="w-64 text-base tracking-wide text-customBlack lg:w-full">
 											{data.description}
 										</p>
 									</div>
