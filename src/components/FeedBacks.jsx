@@ -56,7 +56,7 @@ const FeedBacks = () => {
 			{/* FOR DESKTOP VIEW ONLY */}
 			<div className="hidden xl:flex xl:flex-col xl:gap-5 xl:pb-16 xl:rounded-br-[85px] xl:bg-customCreamVariant xl:font-playfairDisplay xl:w-[560px] xl:absolute xl:bottom-20 xl:left-36 xl:h-80 xl:px-14 xl:pt-6">
 				<p className="text-2xl font-bold xl:text-xl">
-					“asdas Once Marni held me accountable, it was easier for me
+					“Once Marni held me accountable, it was easier for me
 					to finally recognize when Mr. Right (Mark) came along.”
 				</p>
 				<p className="font-oxygen text-xl text-customGray xl:text-base">
