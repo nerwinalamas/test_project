@@ -17,7 +17,7 @@ const Headline = () => {
 					<h2 className="w-[95%] text-4xl mx-auto font-playfairDisplay font-bold leading-[45px] xl:w-[80%] xl:mx-0 xl:text-5xl text-customBlack">
 						How to attract your dream partner.
 					</h2>
-					<p className="w-[95%] mx-auto mt-7 mb-6 text-xl leading-8 tracking-wide text-customBlack xl:mx-0 xl:text-2xl">
+					<p className="w-[95%] mx-auto mt-7 mb-6 text-xl leading-8 tracking-wide text-customGray xl:mx-0 xl:text-2xl">
 						Overcome the beliefs that block your ability to connect
 						with high quality men and learn the real reason why
 						smart, successful women are still single after 30.
