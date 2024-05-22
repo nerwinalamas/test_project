@@ -6,7 +6,7 @@ const Agenda = () => {
 
 	return (
 		<div className="flex flex-col items-center gap-14 font-playfairDisplay md:w-96 lg:w-full lg:flex-row lg:justify-between lg:items-start text-customDarkerBlack">
-			<h1 className="w-48 h-24 text-4xl text-center font-bold lg:text-5xl lg:w-72 lg:text-start lg:leading-[1.13]">
+			<h1 className="w-48 h-24 text-4xl text-center font-bold lg:text-5xl lg:w-72 lg:text-start lg:mx-auto lg:leading-[1.13]">
 				What’s on the agenda
 			</h1>
 			{/* FOR SMALLER SCREENS ONLY */}
@@ -37,7 +37,7 @@ const Agenda = () => {
 				</p>
 			</div>
 
-			<div className="lg:w-[65%]">
+			<div className="lg:w-[55%]">
 				{/* FOR LARGE SCREEN AND UP */}
 				<div className="hidden lg:w-full lg:rounded-full lg:p-3 lg:flex lg:gap-5 lg:items-center lg:bg-customLightGray">
 					<p
@@ -91,7 +91,7 @@ const Agenda = () => {
 						<ul className="relative border-s-4 border-customOrange border-opacity-20 font-oxygen">
 							{agendasData.map((data, index) => (
 								<li className="mb-10 ms-11" key={index}>
-									<span className="absolute flex items-center justify-center w-9 h-9 bg-customOrange text-customWhite rounded-full -start-5">
+									<span className="absolute flex items-center justify-center w-9 h-9 bg-customOrangeVariant text-customWhite rounded-full -start-5">
 										<p className="text-base font-bold">
 											{data.step}
 										</p>
