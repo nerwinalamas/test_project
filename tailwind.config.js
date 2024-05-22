@@ -18,7 +18,7 @@ export default {
         customPeach: "#d88d78",
         customLightGray: "#aa9f89",
         customCream: "#fdf3e3",
-        customOrange: "#e99077",
+        customOrangeVariant: "#e99077",
         customDarkerBlack: "#2c2820",
         customSoftOrange: "#ddba7c",
         customWhiteVariant: "#fffaf3",
