@@ -19,15 +19,15 @@ const FeedBacks = () => {
 	};
 
 	return (
-		<div className="w-screen mt-32 mb-16 pt-20 pb-20 flex flex-col items-center gap-16 bg-customGray xl:h-[590px] xl:flex-wrap xl:justify-center xl:px-40 xl:relative">
-			<h1 className="w-72 text-3xl font-bold font-playfairDisplay text-customWhiteVariant xl:w-[420px] xl:absolute xl:top-20 xl:left-36">
+		<div className="w-full mt-32 mb-16 pt-20 pb-20 flex flex-col items-center gap-16 bg-customGray lg:w-[90%] xl:h-[590px] xl:px-40 xl:relative">
+			<h1 className="w-72 text-3xl font-bold font-playfairDisplay text-customWhiteVariant xl:w-[560px] xl:absolute xl:top-20 xl:left-36 xl:text-4xl xl:tracking-wide">
 				See how women have been impacted by the
 				<span className="text-customSoftOrange"> power of love:</span>
 			</h1>
 
 			{/* SLIDER HERE - SMALLER DEVICE ONLY */}
-			<div className="w-full flex flex-col gap-10 items-center xl:hidden">
-				<div className="w-[341px] flex flex-col gap-5 px-5 pt-9 pb-16 rounded-br-[85px] bg-customCreamVariant font-playfairDisplay transition-transform duration-1000 delay-500">
+			<div className="w-max lg:w-max flex flex-col gap-10 items-center xl:hidden">
+				<div className="w-[341px] flex flex-col gap-5 px-5 pt-9 pb-16 rounded-br-[85px] bg-customCreamVariant font-playfairDisplay transition-transform duration-1000 ease-in-out transform">
 					<p className="text-2xl font-bold xl:text-xl">
 						“{feedbacksData[currentSlide].title}”
 					</p>
@@ -47,6 +47,7 @@ const FeedBacks = () => {
 							key={index}
 							src={index === currentSlide ? ActiveSlideIndicator : NonActiveSlideIndicator}
 							alt="Slide Indicator Icon"
+							className="transition-opacity duration-300 ease-in-out"
 						/>
 					))}
 					<img src={ArrowRight} alt="Arrow Right Icon" onClick={handleNextSlide} className="cursor-pointer" />
@@ -65,7 +66,7 @@ const FeedBacks = () => {
 					presented to me every day.
 				</p>
 				<div className="flex gap-5 items-center">
-					<img src={Janice} title="Janice" alt="Janice Image" className="w-14 object-contain" />
+					<img src={Janice} title="Janice" alt="Janice Image" className="cursor-pointer w-14 object-contain" />
 					<p className="text-2xl italic">Janice</p>
 				</div>
 			</div>
@@ -82,7 +83,7 @@ const FeedBacks = () => {
 					I was worthy of great things.
 				</p>
 				<div className="flex gap-5 items-center">
-					<img src={Jill} title="Jill" alt="Jill Image" className="w-14 object-contain" />
+					<img src={Jill} title="Jill" alt="Jill Image" className="cursor-pointer w-14 object-contain" />
 					<p className="text-2xl italic">Jill</p>
 				</div>
 			</div>
